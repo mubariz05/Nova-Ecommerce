@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOVA — Search Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nova-search-results.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="panel">
+        <header class="header">
+          <a href="#" class="logo" aria-label="NOVA home">NOVA</a>
+
+          <div class="search-bar" role="search">
+            <svg
+              class="search-bar__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <input
+              class="search-bar__input"
+              type="search"
+              value="sneak"
+              aria-label="Search products and brands"
+              placeholder="Search products, brands..."
+            />
+            <button class="search-bar__clear" type="button" aria-label="Clear search">
+              <svg
+                width="18"
+                height="18"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="body">
+          <aside class="sidebar">
+            <section aria-labelledby="suggestions-heading">
+              <h2 id="suggestions-heading" class="section-label">SUGGESTIONS</h2>
+              <ul class="link-list">
+                <li>
+                  <a href="#" class="link-list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+                    sneakers in Men
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+                    sneakers in Women
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+                    sneakers Sale
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="brands-heading">
+              <h2 id="brands-heading" class="section-label">BRANDS</h2>
+              <div class="pill-group">
+                <a href="#" class="pill">Nordic Wear</a>
+                <a href="#" class="pill">Urban Nova</a>
+                <a href="#" class="pill">Denim Core</a>
+                <a href="#" class="pill">StrideX</a>
+              </div>
+            </section>
+
+            <section class="divider" aria-labelledby="recent-heading">
+              <div class="section-header">
+                <h2 id="recent-heading" class="section-label">RECENT SEARCHES</h2>
+                <a href="#" class="clear-all">Clear All</a>
+              </div>
+              <ul class="link-list">
+                <li>
+                  <a href="#" class="link-list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                    White dress
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-list__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                    Leather bag
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="trending-heading">
+              <h2 id="trending-heading" class="section-label">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
+                TRENDING NOW
+              </h2>
+              <div class="pill-group">
+                <a href="#" class="pill pill--filled">Linen</a>
+                <a href="#" class="pill pill--filled">Wedding Guest</a>
+                <a href="#" class="pill pill--filled">Platform Sandals</a>
+              </div>
+            </section>
+          </aside>
+
+          <main class="main">
+            <div class="main__header">
+              <h2 class="section-label">PRODUCT MATCHES</h2>
+              <a href="#" class="view-all-top">
+                View all 2 results <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="product-grid">
+              <!-- mockProducts id:4 — Air Motion Running Sneakers -->
+              <a href="#" class="product-card">
+                <div class="product-card__image-wrap">
+                  <img
+                    class="product-card__image"
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop"
+                    alt="Air Motion Running Sneakers"
+                    loading="lazy"
+                  />
+                  <span class="product-card__badge product-card__badge--sale">-20%</span>
+                </div>
+                <p class="product-card__brand">StrideX</p>
+                <p class="product-card__name">Air Motion Running Sneakers</p>
+                <p class="product-card__price">$95.99</p>
+              </a>
+
+              <!-- mockProducts id:15 — Minimal White Sneakers -->
+              <a href="#" class="product-card">
+                <div class="product-card__image-wrap">
+                  <img
+                    class="product-card__image"
+                    src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&auto=format&fit=crop"
+                    alt="Minimal White Sneakers"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="product-card__brand">StrideX</p>
+                <p class="product-card__name">Minimal White Sneakers</p>
+                <p class="product-card__price">$94.99</p>
+              </a>
+            </div>
+
+            <footer class="footer-link">
+              <a href="#" class="view-all-bottom">
+                VIEW ALL 2 RESULTS <span aria-hidden="true">→</span>
+              </a>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
