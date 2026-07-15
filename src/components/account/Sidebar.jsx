@@ -19,7 +19,7 @@ const navItems = [
   { label: "Settings", to: "/account/profile", icon: IconSettings },
 ];
 
-export default function Sidebar({ isOpen, onClose }) {
+export default function Sidebar({ isOpen, onClose, isLoggedIn = false }) {
   return (
     <>
       <button
@@ -38,7 +38,7 @@ export default function Sidebar({ isOpen, onClose }) {
         className={[
           "fixed inset-y-0 left-0 z-50 flex overflow-hidden border-r border-nova-border bg-white",
           "transition-[width,transform] duration-300 ease-in-out",
-          "lg:static lg:shrink-0",
+          "lg:sticky lg:inset-y-auto lg:top-16 lg:z-30 lg:h-[calc(100vh-4rem)] lg:shrink-0",
           isOpen
             ? "w-[220px] translate-x-0"
             : "w-0 -translate-x-full border-r-0 lg:translate-x-0 lg:w-0",
@@ -91,23 +91,52 @@ export default function Sidebar({ isOpen, onClose }) {
           </nav>
 
           <div className="border-t border-nova-border px-5 py-5">
-            <div className="flex items-center gap-3">
-              <div
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-nova-lavender text-sm font-semibold text-nova-accent"
-                aria-hidden="true"
-              >
-                U
-              </div>
-              <div>
-                <p className="text-sm font-bold text-nova-black">User Profile</p>
-                <button
-                  type="button"
-                  className="mt-0.5 text-xs text-nova-gray transition-colors duration-200 hover:text-nova-black"
+            {isLoggedIn ? (
+              <div className="flex items-center gap-3">
+                <div
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-nova-lavender text-sm font-semibold text-nova-accent"
+                  aria-hidden="true"
                 >
-                  Sign out
-                </button>
+                  U
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-nova-black">
+                    User Profile
+                  </p>
+                  <button
+                    type="button"
+                    className="mt-0.5 text-xs text-nova-gray transition-colors duration-200 hover:text-nova-black"
+                  >
+                    Sign out
+                  </button>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <div
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-nova-lavender text-sm font-semibold text-nova-accent"
+                  aria-hidden="true"
+                >
+                  U
+                </div>
+                <div>
+                  <NavLink
+                    to="/login"
+                    onClick={onClose}
+                    className="block text-sm font-bold text-nova-black hover:underline"
+                  >
+                    Log in
+                  </NavLink>
+                  <NavLink
+                    to="/register"
+                    onClick={onClose}
+                    className="mt-0.5 block text-xs text-nova-gray transition-colors duration-200 hover:text-nova-black"
+                  >
+                    Register
+                  </NavLink>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </aside>

@@ -122,7 +122,7 @@ export default function Wishlist() {
   };
 
   return (
-    <section aria-label="My Wishlist">
+    <section className="p-6" aria-label="My Wishlist">
       <WishlistContentHeader itemCount={mockProducts.length} />
       <WishlistTabs />
 

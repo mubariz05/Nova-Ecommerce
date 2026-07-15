@@ -230,8 +230,8 @@ export default function OrderHistory() {
   const hasMore = visibleCount < filtered.length;
 
   return (
-    <div className="flex w-full min-h-screen font-sans text-[#171716]">
-      <main className="flex-1 min-w-0">
+    <div className="flex flex-col w-full min-h-screen font-sans text-[#171716]">
+      <main className="flex-1 min-w-0 mt-16 sm:mt-[72px] px-4 sm:px-6 lg:px-10 py-8">
         <h1 className="text-[34px] font-bold tracking-[-0.5px] mb-6 text-black">
           Order history
         </h1>

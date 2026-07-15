@@ -182,8 +182,8 @@ export default function SearchOverlay({ onClose, initialQuery }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 font-sans bg-white flex flex-col min-h-screen">
-      <div className="flex items-center gap-5 px-6 py-5 lg:px-8 lg:py-6 border-b border-gray-100 shrink-0">
+    <div className="fixed inset-0 z-50 font-sans bg-white flex flex-col min-h-screen overflow-y-auto">
+      <div className="flex items-center gap-5 px-6 py-5 lg:px-8 lg:py-6 border-b border-gray-100 shrink-0 mt-16 sm:mt-[72px]">
         <button
           type="button"
           onClick={onClose}
@@ -232,7 +232,7 @@ export default function SearchOverlay({ onClose, initialQuery }) {
         </button>
       </div>
 
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-[320px_1fr] xl:grid-cols-[360px_1fr] gap-0 overflow-y-auto">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-[320px_1fr] xl:grid-cols-[360px_1fr] gap-0">
         <div className="px-6 py-8 lg:px-8 md:border-r border-gray-100 flex flex-col gap-9">
           {SEARCH_META.suggestions.length > 0 && (
             <div>
