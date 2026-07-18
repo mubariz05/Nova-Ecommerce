@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import {
   IconAddresses,
@@ -14,12 +15,26 @@ const navItems = [
   { label: "Orders", to: "/account/orders", icon: IconOrders },
   { label: "Wishlist", to: "/account/wishlist", icon: IconWishlist },
   { label: "Addresses", to: "/account/addresses", icon: IconAddresses },
-  { label: "Payment Methods", to: "/account/addresses", icon: IconPayment },
+  { label: "Checkout", to: "/account/checkout", icon: IconPayment },
   { label: "Reviews", to: "/account/reviews", icon: IconReviews },
   { label: "Settings", to: "/account/profile", icon: IconSettings },
 ];
 
 export default function Sidebar({ isOpen, onClose, isLoggedIn = false }) {
+  const asideRef = useRef(null);
+  useEffect(() => {
+    const node = asideRef.current;
+    if (!node) return;
+
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    if (isDesktop) {
+      node.inert = false;
+      return;
+    }
+
+    node.inert = !isOpen;
+  }, [isOpen]);
+
   return (
     <>
       <button
@@ -35,6 +50,7 @@ export default function Sidebar({ isOpen, onClose, isLoggedIn = false }) {
       />
 
       <aside
+        ref={asideRef}
         className={[
           "fixed inset-y-0 left-0 z-50 flex overflow-hidden border-r border-nova-border bg-white",
           "transition-[width,transform] duration-300 ease-in-out",
@@ -43,7 +59,6 @@ export default function Sidebar({ isOpen, onClose, isLoggedIn = false }) {
             ? "w-[220px] translate-x-0"
             : "w-0 -translate-x-full border-r-0 lg:translate-x-0 lg:w-0",
         ].join(" ")}
-        aria-hidden={!isOpen}
       >
         <div className="flex w-[220px] min-w-[220px] flex-1 flex-col">
           <div className="px-5 pb-6 pt-8">

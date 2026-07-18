@@ -19,7 +19,9 @@ export default function TopHeaderBar({
           >
             {sidebarOpen ? <IconClose /> : <IconMenu />}
           </button>
-          <p className="truncate text-sm font-semibold text-nova-black">{title}</p>
+          <p className="truncate text-sm font-semibold text-nova-black">
+            {title}
+          </p>
         </div>
 
         <div className="flex shrink-0 items-center gap-1">

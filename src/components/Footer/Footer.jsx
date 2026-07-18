@@ -1,22 +1,19 @@
 const Footer = () => {
   return (
-    <footer
-      className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen
-                 border-t border-neutral-200 bg-white"
-    >
-      <div className="mx-auto px-4 py-4">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <div>
+    <footer className="w-full border-t border-neutral-200 bg-white">
+      <div className="mx-auto w-full px-6 py-4 sm:px-10 lg:px-16">
+        <div className="flex w-full flex-col flex-wrap gap-6 sm:flex-row sm:justify-between">
+          <div className="min-w-0 flex-1 text-center sm:max-w-xs sm:text-left">
             <h2 className="text-sm font-bold tracking-wide text-neutral-900">
               NOVA COMMERCE
             </h2>
-            <p className="mt-1 max-w-xs text-[10px] leading-relaxed text-neutral-500">
+            <p className="mt-1 text-[10px] leading-relaxed text-neutral-500">
               Elevating everyday essentials through meticulous curation and
               minimalist design.
             </p>
           </div>
 
-          <div>
+          <div className="min-w-0 flex-1 text-center">
             <h3 className="text-[9px] font-semibold tracking-wider text-neutral-900 uppercase">
               Customer Care
             </h3>
@@ -56,7 +53,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0 flex-1 text-center sm:max-w-sm sm:text-left">
             <h3 className="text-[9px] font-semibold tracking-wider text-neutral-900 uppercase">
               Newsletter
             </h3>
@@ -65,7 +62,7 @@ const Footer = () => {
             </p>
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="mt-1 flex w-full max-w-sm"
+              className="mt-1 flex w-full max-w-sm mx-auto sm:mx-0"
             >
               <input
                 type="email"

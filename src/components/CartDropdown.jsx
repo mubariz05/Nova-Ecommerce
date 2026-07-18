@@ -3,9 +3,7 @@ import { X } from "lucide-react";
 
 export default function CartDropdown({ isOpen, onClose }) {
   const { items, removeItem, clearCart } = useCart();
-
   if (!isOpen) return null;
-
   const total = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
