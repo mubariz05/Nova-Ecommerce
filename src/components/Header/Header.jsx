@@ -28,7 +28,7 @@ export default function Header() {
     ].join(" ");
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm px-4 sm:px-8 py-3 flex items-center justify-between flex-wrap gap-4">
+    <header className="sticky top-0 left-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm px-4 sm:px-8 py-3 flex items-center justify-between flex-wrap gap-4">
       <Link
         to="/"
         className="flex items-center gap-2 text-2xl font-bold text-nova-black hover:text-blue-600 transition tracking-wide"
