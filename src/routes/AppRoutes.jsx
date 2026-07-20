@@ -16,6 +16,7 @@ import ReturnExchangeWizard from "../pages/support/ReturnExchangeWizard";
 import EmptyStateShowcase from "../pages/showcase/EmptyStateShowcase";
 import SearchOverlay from "../pages/products/SearchOverlay";
 import NovaCommerceAuth from "../pages/LoginRegister/LoginRegister";
+import SalePage from "../pages/showcase/EmptyStateShowcase";
 
 function SearchOverlayRedirect() {
   const { searchTerm } = useParams();
@@ -36,6 +37,7 @@ export default function AppRoutes() {
         <Route path="search" element={<SearchResults />} />
         <Route path="women/dresses" element={<WomenDresses />} />
         <Route path="shopping/cart" element={<ShoppingCart />} />
+        <Route path="sale" element={<SalePage />} />
 
         <Route path="account" element={<AccountOverview />} />
         <Route path="account/orders" element={<OrderHistory />} />

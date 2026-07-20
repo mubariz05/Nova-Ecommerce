@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { HelpCircle } from "lucide-react";
 import {
   IconAddresses,
   IconOrders,
@@ -18,6 +19,7 @@ const navItems = [
   { label: "Checkout", to: "/account/checkout", icon: IconPayment },
   { label: "Reviews", to: "/account/reviews", icon: IconReviews },
   { label: "Settings", to: "/account/profile", icon: IconSettings },
+  { label: "Help Center", to: "/support", icon: HelpCircle },
 ];
 
 export default function Sidebar({ isOpen, onClose, isLoggedIn = false }) {

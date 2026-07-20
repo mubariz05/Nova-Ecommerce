@@ -17,27 +17,27 @@ export default function MainLayout() {
     <div className="main-layout flex min-h-screen flex-col bg-[#fafafa] font-sans">
       <Header />
 
-      <button
-        type="button"
-        onClick={() => setSidebarOpen((open) => !open)}
-        aria-label={sidebarOpen ? "Sidebar-ı bağla" : "Sidebar-ı aç"}
-        aria-expanded={sidebarOpen}
-        className={[
-          "fixed top-20 sm:top-[84px] z-50 flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-nova-black shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-50",
-          sidebarOpen ? "left-[232px]" : "left-3",
-        ].join(" ")}
-      >
-        {sidebarOpen ? (
-          <PanelLeftClose size={18} strokeWidth={1.8} />
-        ) : (
-          <PanelLeftOpen size={18} strokeWidth={1.8} />
-        )}
-      </button>
+      <div className="relative flex min-h-0 w-full flex-1">
+        <button
+          type="button"
+          onClick={() => setSidebarOpen((open) => !open)}
+          aria-label={sidebarOpen ? "Sidebar-ı bağla" : "Sidebar-ı aç"}
+          aria-expanded={sidebarOpen}
+          className={[
+            "absolute top-4 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-nova-black shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-50",
+            sidebarOpen ? "left-[232px]" : "left-3",
+          ].join(" ")}
+        >
+          {sidebarOpen ? (
+            <PanelLeftClose size={18} strokeWidth={1.8} />
+          ) : (
+            <PanelLeftOpen size={18} strokeWidth={1.8} />
+          )}
+        </button>
 
-      <div className="flex min-h-0 flex-1 mt-16 sm:mt-[72px]">
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <div className="flex min-w-0 flex-1 flex-col transition-[margin,padding] duration-300 ease-in-out">
-          <div className="flex-1">
+        <div className="flex min-w-0 w-full flex-1 flex-col transition-[margin,padding] duration-300 ease-in-out">
+          <div className="w-full flex-1">
             <Outlet />
           </div>
         </div>
